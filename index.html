@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Apps Showcase</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --background-color: #f8fafc;
+            --card-color: #ffffff;
+            --text-color: #1e293b;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .apps-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        @media (min-width: 768px) {
+            .apps-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .apps-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .app-card {
+            background: var(--card-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px var(--shadow-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .app-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .app-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .app-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .app-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .app-description {
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+
+        .app-meta {
+            font-size: 0.875rem;
+            color: #64748b;
+            margin-bottom: 1rem;
+        }
+
+        .app-link {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .app-link:hover {
+            background-color: var(--secondary-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--text-color);
+            color: white;
+        }
+
+        .placeholder-text {
+            color: #94a3b8;
+            font-style: italic;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #475569;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Portfolio Apps Showcase</h1>
+            <p class="subtitle">A collection of interactive applications and data visualization tools</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Featured Applications</h2>
+
+        <div class="apps-grid">
+            <!-- DWRAP App -->
+            <div class="app-card">
+                <div class="app-image">
+                    <img src="/api/placeholder/800/450" alt="DWRAP Dashboard Screenshot" width="100%" height="100%">
+                </div>
+                <div class="app-content">
+                    <h3 class="app-title">DWRAP Refugees Policy Analysis</h3>
+                    <div class="app-meta">Developed for World Bank</div>
+                    <div>
+                        <span class="tag">Data Analysis</span>
+                        <span class="tag">Policy</span>
+                        <span class="tag">Interactive</span>
+                        <span class="tag">R Shiny</span>
+                    </div>
+                    <p class="app-description">
+                        The "Dataset of World Refugee and Asylum Policies (DWRAP)" offers a complete dataset of de jure
+                        asylum and refugee policies for all 193 countries for the 70 years from 1951-2022. The DWRAP
+                        index aggregates policies from 5 fields: Access; Services; Livelihoods; Movement, and
+                        Citizenship and Participation.
+                    </p>
+                    <a href="https://portfolio-apps.shinyapps.io/the_world_bank_dwrap_dashboard/" class="app-link"
+                        target="_blank">View Application</a>
+                </div>
+            </div>
+
+            <!-- Placeholder for future apps -->
+            <div class="app-card">
+                <div class="app-image">
+                    <p class="placeholder-text">Future App Screenshot</p>
+                </div>
+                <div class="app-content">
+                    <h3 class="app-title">Your Next Amazing App</h3>
+                    <div class="app-meta">Coming Soon</div>
+                    <div>
+                        <span class="tag">Future</span>
+                        <span class="tag">Development</span>
+                    </div>
+                    <p class="app-description">
+                        <span class="placeholder-text">
+                            This is a placeholder for your next portfolio application. Add your app title, description,
+                            and URL when ready.
+                        </span>
+                    </p>
+                    <a href="#" class="app-link" style="background-color: #94a3b8;">Coming Soon</a>
+                </div>
+            </div>
+
+            <!-- Another placeholder -->
+            <div class="app-card">
+                <div class="app-image">
+                    <p class="placeholder-text">Future App Screenshot</p>
+                </div>
+                <div class="app-content">
+                    <h3 class="app-title">Another Amazing Project</h3>
+                    <div class="app-meta">In Development</div>
+                    <div>
+                        <span class="tag">Future</span>
+                        <span class="tag">Project</span>
+                    </div>
+                    <p class="app-description">
+                        <span class="placeholder-text">
+                            This is a placeholder for another future portfolio application. Add your app title,
+                            description, and URL when ready.
+                        </span>
+                    </p>
+                    <a href="#" class="app-link" style="background-color: #94a3b8;">Coming Soon</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Your Name | Portfolio Apps Showcase</p>
+        </div>
+    </footer>
+</body>
+
+</html>
